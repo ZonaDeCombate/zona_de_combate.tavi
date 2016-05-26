@@ -2,13 +2,13 @@
 [] call compileFinal preprocessfilelinenumbers "scripts\intro.sqf";
 
 if (isServer) then {
-	
+
 	[] spawn {
 
-		while {true} do {        
-				
+		while {true} do {
+
 			sleep 1100; // some delay before first run (waiting for installation)/delay for another run.
-			[] call INS_fnc_handle_installations; 
+			[] call INS_fnc_handle_installations;
 		};
 	};
 };
@@ -33,8 +33,8 @@ execVM "Scripts\shorternights.sqf";
 // Iniciando sistema de animações
 call compile preprocessFileLineNumbers "shoteranimation\init.sqf";
 
-// Sistema de relay de rádio
-[300] spawn zc_fnc_radioRelay;
+// Sistema de relay de rádio (Não utilizado neste missão)
+//[300] spawn zc_fnc_radioRelay;
 
 //HandlessClient Inicialização
 if (!hasInterface && !isDedicated) then {
@@ -45,30 +45,6 @@ if (!hasInterface && !isDedicated) then {
 };
 
 execVM "briefing.sqf";
-
-//TODO: Não tá funcionando direito. Rever.
-/*if (! isDedicated) then
-{
-
-  zc_fnc_setRating = {
-    _setRating = _this select 0;
-    _unit = _this select 1;
-    _getRating = rating _unit;
-    _addVal = _setRating - _getRating;
-    _unit addRating _addVal;
-  };
-
-  waituntil {
-    _score = rating player;
-
-    if (_score < 0) then {
-      [0,player] call zc_fnc_setRating;
-      hint parseText format["<t color='#ffff00'>Atenção %1: </t><br/>*** Evite ferir aliados e civis. ***",name player];
-    };
-    sleep 0.4;
-    false
-  };
-};*/
 
 
 waituntil {(player getvariable ["alive_sys_player_playerloaded",false])};

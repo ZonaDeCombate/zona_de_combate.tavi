@@ -2,7 +2,7 @@ if(isDedicated) exitWith{};
 
 if (hasInterface) then {
 
-    ["Zona de Combate | Provincia de Kunar - Client Intro..."] call ALiVE_fnc_Dump;
+    ["Zona de Combate | Conflito Russia - Ucrania - Client Intro..."] call ALiVE_fnc_Dump;
 
     //Intro
     [] spawn {
@@ -33,7 +33,7 @@ if (hasInterface) then {
 
 		_cam camsetpos [_camx -0 ,_camy + 0,_camz+3];
 
-		titleText ["A   B A T A L H A   DA   P R O V I N C I A    D E    R E S H M A A N", "BLACK IN",10];
+		titleText ["O  C O N F L I T O  R Ú S S I A  -  U C R Â N I A", "BLACK IN",10];
 		10 fadesound 0.9;
 		_cam CamCommit 20;
 		sleep 5;

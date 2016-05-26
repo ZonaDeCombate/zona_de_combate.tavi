@@ -5,7 +5,7 @@
 
 author = "Swordfish | Toaster";					        // Visible when loading mission
 onLoadName = "Zona de Combate";  		        // Visible when loading mission
-OnLoadMission = "Buscar informações e inteligência é a chave para desmontar as operações dos insurgentes em todo o território. ";
+OnLoadMission = "Você é seu próprio general. Então, tome agora a iniciativa, planeje e marche decidido para a vitória.<br/>Sun Tzu";
 loadScreen = "images\intro3.jpg";				        // Visible when loading mission
 overviewPicture = "images\intro3.jpg";			        // Visible when selecting mission
 
@@ -15,9 +15,9 @@ onLoadMissionTime = 0;									// Time and date displayed while the mission load
 
 class Header
 	{
-		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
+		gameType = Sandbox;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 		minPlayers = 1;									// Min # of players the MISSION supports
-		maxPlayers = 60;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+		maxPlayers = 240;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
 	};
 
 //------------------------- Admin
@@ -42,6 +42,7 @@ respawnDelay = 15;										// Delay prior to respawn, ensure longer than BTC re
 RespawnDialog = 0;                                      // default = 1. show respawn timer and scoreboard when killed.
 respawnButton = 0;
 respawnOnStart = -1;
+respawnTemplatesEast[] = {"MenuPosition"};
 
 
 //-------------------------Garbage Coletor
@@ -63,9 +64,9 @@ wreckRemovalMaxTime = 300;
 //-- Functions
 
 class CfgFunctions	{
-	
+
 	class INS  {
-		
+
 		class missionfnc  {
 
 			class playersinOA  {
@@ -97,117 +98,14 @@ class CfgFunctions	{
 };
 
 
-class CfgSFX
-{
-	sounds[] = {};
 
-	class sfxsound
-	{
-		name = "sfxsound";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound2
-	{
-		name = "sfxsound2";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound2.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound3
-	{
-		name = "sfxsound3";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound3.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound4
-	{
-		name = "sfxsound4";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound4.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound5
-	{
-		name = "sfxsound5";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound5.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-        class sfxsound6
-	{
-		name = "sfxsound6";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound2.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound7
-	{
-		name = "sfxsound7";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound3.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound8
-	{
-		name = "sfxsound8";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\sfxsound4.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound9
-	{
-		name = "news1";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\news1.ogg",10,1,50,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-        class sfxsound10
-	{
-		name = "music1";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\music1.ogg",15,1,18,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-
-	class sfxsound11
-	{
-		name = "music2";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\music2.ogg",15,1,18,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-        class sfxsound12
-	{
-		name = "kunduznews";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\kunduznews.ogg",7,1,18,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-        class sfxsound13
-	{
-		name = "SanginnewsBBC";
-		sounds[]={sfxsound};
-		sfxsound[]={"sound\SanginnewsBBC.ogg",15,1,18,1,1,1,0};
-		empty[]= {"",0,0,0,0,0,0,0};
-	};
-};
 
 class CfgSounds	{
-	
+
 	sounds[] = {Success};
-		
+
 		class Success	{
-		
+
 			name = "Success";
 			sound[] = {"@A3\dubbing_f_beta\showcase_commanding_i\35_Victory\showcase_commanding_i_35_victory_BHQ_0.ogg",1,1};
 			titles[] = {};
@@ -217,7 +115,7 @@ class CfgSounds	{
 class CfgNotifications	{
 
 	class iedfactoryhq	{
-	
+
 		title = "Insurgência";
 		iconPicture = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
 		description = "<t color='#ffffff'>%1<br /> DESTRUIDO</t>";
@@ -226,9 +124,9 @@ class CfgNotifications	{
 		duration = 8;
 		priority = 0;
 	};
-	
+
 	class recruitmenthq	{
-	
+
 		title = "Insurgência";
 		iconPicture = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
 		description = "<t color='#ffffff'>%1<br /> DESTRUIDO</t>";
@@ -237,9 +135,9 @@ class CfgNotifications	{
 		duration = 8;
 		priority = 0;
 	};
-	
+
 	class weaponsdepothq	{
-	
+
 		title = "Insurgência";
 		iconPicture = "\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
 		description = "<t color='#ffffff'>%1<br /> DESTRUIDO</t>";
