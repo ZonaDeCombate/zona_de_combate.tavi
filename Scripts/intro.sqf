@@ -7,7 +7,7 @@ if (hasInterface) then {
     //Intro
     [] spawn {
 
-		playMusic "ALiVE_Intro";
+		//playMusic "ALiVE_Intro";
 
 		waitUntil {!isNull player};
 
