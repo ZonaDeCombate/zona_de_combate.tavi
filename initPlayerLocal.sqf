@@ -1,5 +1,5 @@
 // Check de piloto
-_null = [] execVM "scripts\pilotcheck.sqf";
+//_null = [] execVM "scripts\pilotcheck.sqf";
 
 //-- Create locations for ALiVE custom objectives
 //execVM "Scripts\createLocations.sqf";
