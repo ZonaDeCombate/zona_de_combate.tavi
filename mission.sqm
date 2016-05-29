@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2602;
+		nextID=2604;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=128;
+		nextID=144;
 	};
 	class Camera
 	{
-		pos[]={10180.854,85.292885,18676.377};
-		dir[]={-0.16171926,-0.26102754,-0.9516924};
-		up[]={-0.043729939,0.96533024,-0.25734195};
-		aside[]={-0.9858731,3.7282007e-008,0.16752775};
+		pos[]={10162.567,101.74244,18628.133};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -3261,8 +3261,8 @@ class Mission
 				};
 				class Attribute16
 				{
-					property="SpyderAddons_amb_ambiance_VehiclesDivider";
-					expression="_this setVariable ['VehiclesDivider',_value,true];";
+					property="SpyderAddons_amb_ambiance_SpawnRangeAltitude";
+					expression="_this setVariable ['SpawnRangeAltitude',_value,true];";
 					class Value
 					{
 						class data
@@ -3274,7 +3274,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="20";
 						};
 					};
 				};
@@ -3299,6 +3299,25 @@ class Mission
 				};
 				class Attribute18
 				{
+					property="SpyderAddons_amb_ambiance_VehiclesDivider";
+					expression="_this setVariable ['VehiclesDivider',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute19
+				{
 					property="SpyderAddons_amb_ambiance_Locations";
 					expression="_this setVariable ['Locations',_value,true];";
 					class Value
@@ -3316,7 +3335,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute19
+				class Attribute20
 				{
 					property="SpyderAddons_amb_ambiance_AnimalChance";
 					expression="_this setVariable ['AnimalChance',_value,true];";
@@ -3335,7 +3354,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=20;
+				nAttributes=21;
 			};
 		};
 		class Item19
@@ -7129,7 +7148,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="SIDE";
+							value="FACTION";
 						};
 					};
 				};
@@ -7243,7 +7262,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -7281,7 +7300,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="rhs_faction_msv";
+							value="rhs_faction_msv, rhsgref_faction_chdkz";
 						};
 					};
 				};
@@ -7395,7 +7414,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="SIDE";
+							value="FACTION";
 						};
 					};
 				};
@@ -7433,7 +7452,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="false";
 						};
 					};
 				};
@@ -7452,7 +7471,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="LaserDesignator";
+							value="alive_tablet";
 						};
 					};
 				};
@@ -7566,7 +7585,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="2000";
+							value="500";
 						};
 					};
 				};
@@ -7623,7 +7642,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="SIDE";
+							value="FACTION";
 						};
 					};
 				};
@@ -7642,7 +7661,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="LOP_ChDKZ";
+							value="rhsgref_faction_cdf_ground";
 						};
 					};
 				};
@@ -40912,7 +40931,7 @@ class Mission
 			name="respawn_guerrila";
 			text=" Base UCR";
 			type="Empty";
-			angle=27.696972;
+			angle=27.696968;
 			id=1525;
 			atlOffset=-0.0092315674;
 		};
@@ -67068,7 +67087,7 @@ class Mission
 			name="respawn_east";
 			text=" Base RUS";
 			type="Empty";
-			angle=27.69697;
+			angle=27.696966;
 			id=2319;
 			atlOffset=-0.0092315674;
 		};
@@ -76665,7 +76684,7 @@ class Mission
 			name="respawn_east2";
 			text=" Base INS";
 			type="Empty";
-			angle=27.696968;
+			angle=27.696964;
 			id=2523;
 		};
 		class Item506
