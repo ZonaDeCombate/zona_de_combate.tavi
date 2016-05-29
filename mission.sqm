@@ -7395,7 +7395,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0.1";
+							value="0.2";
 						};
 					};
 				};
@@ -7604,7 +7604,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
